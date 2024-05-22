@@ -1,1 +1,5 @@
-javascript:(function() {    const answers = {        "What is the chemical symbol for water?": "H2O",        "What planet is known as the Red Planet?": "Mars"        // Add more question-answer pairs here    };    const questions = document.querySelectorAll(%27.question-container%27);    questions.forEach(container => {        const question = container.querySelector(%27.question-text%27).innerText.trim();        const answer = answers[question];        if (answer) {            const input = container.querySelector(%27input[type="text"]%27);            if (input) {                input.value = answer;            } else {                const radio = container.querySelector(`input[value="${answer}"]`);                if (radio) {                    radio.checked = true;                }            }        }    });})();
+javascript:(function() {
+    var script = document.createElement('script');
+    script.src = 'YOUR_HOSTED_SCRIPT_URL_HERE';
+    document.body.appendChild(script);
+})();
